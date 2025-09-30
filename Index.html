@@ -1,116 +1,144 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Deepak Patel - Portfolio</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Deepak Patel | Portfolio</title>
+
+  <!-- Font Awesome for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container">
-            <a class="navbar-brand" href="#">Deepak Patel</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <h1>Deepak Patel</h1>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#tech-stack">Tech Stack</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><button id="dark-toggle">🌙</button></li>
+    </ul>
+  </nav>
 
-    <!-- Hero Section -->
-    <header class="text-center py-5 bg-primary text-white">
-        <div class="container">
-            <img src="profile.jpg" alt="Deepak Patel" class="profile-img">
-            <h1 class="display-4">Hello, I'm Deepak Patel</h1>
-            <p class="lead">Passionate about coding and web development.</p>
-        </div>
-    </header>
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="profile.jpg" alt="Deepak Patel" class="profile-pic" />
+    <h2>Software Developer</h2>
+    <p>Passionate about building scalable, modern, and user-friendly web applications.</p>
 
-    <!-- About Section -->
-    <section id="about" class="container py-5">
-        <h2>About Me</h2>
-        <p>I am Deepak Patel, a passionate Software Developer with expertise in Java, Python, HTML, CSS, and JavaScript. Currently pursuing my Master's in Computer Applications (MCA) from the University of Mumbai, I have a strong foundation in software development, databases, and front-end technologies.
+    <!-- CV Buttons -->
+    <a class="btn" href="https://drive.google.com/file/d/166ygy0v0jGuCRagydsT-0582te6kVLGa/view?usp=sharing" target="_blank">
+      📄 View CV
+    </a>
+    <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=166ygy0v0jGuCRagydsT-0582te6kVLGa">
+      ⬇️ Download CV
+    </a>
+  </section>
 
-            With hands-on experience in facial recognition systems, hospital management applications, and interactive web projects, I thrive on building efficient, scalable, and user-friendly applications. My projects showcase my ability to integrate MySQL, OpenCV, Java, and React.js into real-world solutions.
-            
-            I am constantly learning and exploring new technologies, particularly in AI and software development, to enhance my skill set and contribute to innovative solutions.</p>
-    </section>
+  <!-- About Section -->
+  <section id="about" class="about fade-in">
+    <h2>About Me</h2>
+    <p>
+      Hi, I'm <strong>Deepak Patel</strong>, a passionate <b>Software Developer</b> with an MCA degree from
+      Mumbai University. I specialize in <b>Java</b>, <b>Python</b>, and <b>Full-Stack Web Development</b>,
+      with hands-on experience in building responsive websites, interactive dashboards, and desktop applications.
+    </p>
+    <p>
+      My technical expertise includes <b>React.js</b>, <b>Next.js</b>, <b>Django</b>, <b>Node.js</b>, and
+      databases like <b>MySQL</b> and <b>MongoDB</b>. I have successfully developed projects such as
+      a Car Finder Web App, a User Profile Analyzer, and a Hospital Management System.
+    </p>
+    <p>
+      I am highly motivated to contribute to innovative projects, apply problem-solving skills, and
+      grow as a professional developer. Beyond coding, I enjoy exploring new technologies, learning about AI/ML,
+      and enhancing my skill set through continuous practice and projects.
+    </p>
+  </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="container py-5">
-        <h2>Projects</h2>
-        <div class="row">
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Project 1</h3>
-                        <p class="card-text">Description of project.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 mb-4">
-                <div class="card">
-                    <div class="card-body">
-                        <h3 class="card-title">Project 2</h3>
-                        <p class="card-text">Description of project.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+  <!-- Tech Stack Section -->
+  <section id="tech-stack" class="fade-in">
+    <h2>My Tech Stack</h2>
+    <p>Here are the tools and technologies I work with:</p>
+    <div class="tech-icons">
+      <span title="Object-Oriented Programming Language"><i class="fa-brands fa-java"></i> Java</span>
+      <span title="High-level Programming Language"><i class="fa-brands fa-python"></i> Python</span>
+      <span title="Frontend JavaScript Library"><i class="fa-brands fa-react"></i> React.js</span>
+      <span title="React Framework for SSR & SEO"><i class="fa-solid fa-globe"></i> Next.js</span>
+      <span title="Backend Framework for Python"><i class="fa-solid fa-gears"></i> Django</span>
+      <span title="JavaScript Runtime for Backend"><i class="fa-brands fa-node-js"></i> Node.js</span>
+      <span title="Relational Database"><i class="fa-solid fa-database"></i> MySQL</span>
+      <span title="NoSQL Database"><i class="fa-solid fa-leaf"></i> MongoDB</span>
+      <span title="Version Control System"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
+      <span title="Frontend Core Technologies"><i class="fa-solid fa-code"></i> HTML, CSS, JS</span>
+    </div>
+  </section>
 
-    <!-- Skills Section -->
-    <section id="skills" class="container py-5">
-        <h2>Skills</h2>
-        <div class="progress mb-3">
-            <div class="progress-bar" role="progressbar" style="width: 100%;">HTML</div>
-        </div>
-        <div class="progress mb-3">
-            <div class="progress-bar bg-success" role="progressbar" style="width: 70%;">CSS</div>
-        </div>
-        <div class="progress mb-3">
-            <div class="progress-bar bg-warning" role="progressbar" style="width: 70%;">JavaScript</div>
-        </div>
-        <div class="progress mb-3">
-            <div class="progress-bar bg-danger" role="progressbar" style="width: 60%;">React</div>
-        </div>
-    </section>
+ <!-- Projects Section -->
+<section id="projects" class="fade-in">
+  <h2>Projects</h2>
+  <div class="project-grid">
+    <div class="project-card">
+      <h3>🚗 Car Finder Web App</h3>
+      <p>A responsive web app to search, filter, and save cars with pagination and wishlist functionality.</p>
+    </div>
+    <div class="project-card">
+      <h3>🌦 Weather App</h3>
+      <p>A weather forecast application using OpenWeather API that shows live temperature, humidity, and conditions for any city worldwide.</p>
+    </div>
+    <div class="project-card">
+      <h3>✅ Advanced To-Do App</h3>
+      <p>A feature-rich to-do list application with categories, due dates, priority levels, and localStorage support for persistence.</p>
+    </div>
+  </div>
+</section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="container py-5">
-        <h2>Contact</h2>
-        <form>
-            <div class="mb-3">
-                <label class="form-label">Name</label>
-                <input type="text" class="form-control">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control">
-            </div>
-            <div class="mb-3">
-                <label class="form-label">Message</label>
-                <textarea class="form-control" rows="4"></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send</button>
-        </form>
-    </section>
+  <!-- Contact Section -->
+  <section id="contact" class="fade-in">
+    <h2>Contact Me</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
 
-    <!-- Footer -->
-    <footer class="text-center py-3 bg-light">
-        <p>&copy; <span id="year"></span> Deepak Patel</p>
-    </footer>
+  <!-- Footer -->
+  <footer>
+    <div class="social-links">
+      <a href="https://www.linkedin.com/in/deepak-patel18" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+      <a href="https://github.com/deepak-patel18" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+    </div>
+    <div>
+      <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=166ygy0v0jGuCRagydsT-0582te6kVLGa">
+        📄 Download My CV
+      </a>
+    </div>
+    <p>&copy; 2025 Deepak Patel. All rights reserved.</p>
+  </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script>
+  <!-- Script -->
+  <script>
+    // Dark Mode Toggle
+    document.getElementById("dark-toggle").addEventListener("click", () => {
+      document.body.classList.toggle("dark-mode");
+    });
+
+    // Fade-in on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.3 });
+
+    fadeElements.forEach(el => observer.observe(el));
+  </script>
 </body>
 </html>

@@ -1,19 +1,35 @@
-// Set the current year in the footer
-document.getElementById("year").textContent = new Date().getFullYear();
+document.addEventListener("DOMContentLoaded", () => {
+  console.log("Portfolio loaded!");
 
-// Smooth scrolling effect for navigation links
-document.querySelectorAll('.nav-link').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        const targetId = this.getAttribute('href').substring(1);
-        document.getElementById(targetId).scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+  // 🌙 Dark Mode Toggle
+  const toggle = document.getElementById("dark-toggle");
+  const body = document.body;
 
-// Contact form submission (Dummy alert)
-document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    alert("Your message has been sent!");
+  if (localStorage.getItem("theme") === "dark") {
+    body.classList.add("dark-mode");
+    toggle.textContent = "☀️";
+  }
+
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark-mode");
+    const isDark = body.classList.contains("dark-mode");
+    localStorage.setItem("theme", isDark ? "dark" : "light");
+    toggle.textContent = isDark ? "☀️" : "🌙";
+  });
+
+  // ✨ Fade-in animation on scroll
+  const faders = document.querySelectorAll(".fade-in");
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.2 }
+  );
+
+  faders.forEach(fade => observer.observe(fade));
 });
