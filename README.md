@@ -4,7 +4,7 @@ This is my **personal portfolio website** showcasing my **projects, skills, and 
 
 ## 🌍 Live Demo
 You can check out my portfolio here:  
-🔗 [Deepak Patel Portfolio](https://your-github-username.github.io/Portfolio-website/)
+🔗 [Deepak Patel Portfolio](https://deepak-patel18.github.io/Portfolio-website/)
 
 ## ✨ Features
 - 🌟 **Fully Responsive Design** (Mobile & Desktop)
