@@ -1,55 +1,23 @@
-/* =======================
-   General Styles
-======================= */
+/* General Styles */
 body {
   margin: 0;
   font-family: Arial, sans-serif;
   line-height: 1.6;
-
-  /* Choose ONE of the backgrounds below by uncommenting it */
-
-  /* --- Option 1: Elegant Blue Gradient (Professional) --- */
-  background: linear-gradient(135deg, #e0f7fa, #80deea);
-
-  /* --- Option 2: Purple & Pink Gradient (Modern, Creative) --- */
-  /* background: linear-gradient(135deg, #a18cd1, #fbc2eb); */
-
-  /* --- Option 3: Fresh Green Gradient (Calm & Refreshing) --- */
-  /* background: linear-gradient(135deg, #d4fc79, #96e6a1); */
-
+  background: linear-gradient(135deg, #f8f9fa, #e9ecef); /* soft gray gradient */
   color: #333;
   scroll-behavior: smooth;
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* =======================
-   Dark Mode
-======================= */
-body.dark-mode {
-  background: #121212;
-  color: #eee;
-}
-
-body.dark-mode section {
-  background: rgba(30, 30, 30, 0.95);
-  color: #eee;
-}
-
-body.dark-mode .navbar,
-body.dark-mode footer {
-  background: #1e1e1e;
-}
-
-/* =======================
-   Navbar
-======================= */
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background: #222;
+  background: #008080; /* teal */
   color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 }
 
 .nav-links {
@@ -66,26 +34,15 @@ body.dark-mode footer {
 }
 
 .nav-links a:hover {
-  color: #1da1f2;
+  color: #ffb703; /* gold hover */
 }
 
-#dark-toggle {
-  background: transparent;
-  border: none;
-  font-size: 1.5rem;
-  cursor: pointer;
-  color: #fff;
-}
-
-/* =======================
-   Hero Section
-======================= */
+/* Hero Section */
 .hero {
   text-align: center;
   padding: 3rem 1rem;
 }
 
-/* Profile Picture Animation */
 .profile-pic {
   width: 150px;
   height: 150px;
@@ -94,115 +51,49 @@ body.dark-mode footer {
   display: block;
   margin: 0 auto 1rem auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  opacity: 0;
-  transform: scale(0.8);
-  animation: fadeZoomIn 1.2s ease forwards;
-  animation-delay: 0.3s;
 }
 
-@keyframes fadeZoomIn {
-  0% { opacity: 0; transform: scale(0.8); }
-  100% { opacity: 1; transform: scale(1); }
-}
-
-/* Hero Text Animation */
-.hero h2, .hero p {
-  opacity: 0;
-  transform: translateY(15px);
-  animation: textFadeUp 1s ease forwards;
-}
-
-.hero h2 { animation-delay: 0.6s; }
-.hero p { animation-delay: 0.9s; }
-
-@keyframes textFadeUp {
-  0% { opacity: 0; transform: translateY(15px); }
-  100% { opacity: 1; transform: translateY(0); }
-}
-
-/* =======================
-   Buttons
-======================= */
+/* Buttons */
 .btn {
   display: inline-block;
-  margin: 0.5rem;
-  padding: 0.75rem 1.5rem;
-  background: #222;
+  margin-top: 1rem;
+  padding: 0.75rem 1.2rem;
+  background: #008080; /* teal */
   color: #fff;
-  font-weight: 500;
   text-decoration: none;
-  border-radius: 6px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  transition: background 0.3s ease, transform 0.2s ease;
+  border-radius: 5px;
+  transition: background 0.3s ease;
 }
 
 .btn:hover {
-  background: #444;
-  transform: translateY(-2px);
+  background: #006666;
 }
 
 .btn.secondary {
-  background: #1da1f2;
+  background: #555;
 }
 
 .btn.secondary:hover {
-  background: #0d8ddb;
+  background: #333;
 }
 
-/* =======================
-   Section Styling
-======================= */
+/* Section Styling */
 section {
   padding: 2rem 1rem;
   max-width: 900px;
   margin: 2rem auto;
-  background: rgba(255, 255, 255, 0.9);
+  background: rgba(255, 255, 255, 0.95); /* card effect */
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.1);
 }
 
-/* =======================
-   Tech Stack
-======================= */
-#tech-stack {
-  text-align: center;
-  margin-top: 1rem;
+/* Headings */
+h2 {
+  color: #008080; /* teal */
+  margin-bottom: 1rem;
 }
 
-.tech-icons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  justify-content: center;
-  margin-top: 1rem;
-}
-
-.tech-icons span {
-  display: flex;
-  align-items: center;
-  gap: 6px;
-  background: rgba(255, 255, 255, 0.85);
-  padding: 8px 14px;
-  border-radius: 6px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.2s ease, background 0.3s ease;
-  cursor: default;
-}
-
-.tech-icons span i {
-  font-size: 1.1rem;
-}
-
-.tech-icons span:hover {
-  transform: scale(1.05);
-  background: #ffffff;
-}
-
-/* =======================
-   Projects Grid
-======================= */
+/* Projects Grid */
 .project-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -214,16 +105,15 @@ section {
   padding: 1rem;
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-card:hover {
   transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-/* =======================
-   Contact Form
-======================= */
+/* Contact Form */
 form {
   display: flex;
   flex-direction: column;
@@ -234,26 +124,52 @@ input, textarea, button {
   padding: 0.75rem;
   border-radius: 5px;
   border: 1px solid #ccc;
+  font-size: 1rem;
 }
 
 button {
-  background: #222;
+  background: #008080; /* teal */
   color: #fff;
   cursor: pointer;
   transition: background 0.3s ease;
 }
 
 button:hover {
-  background: #444;
+  background: #006666;
 }
 
-/* =======================
-   Footer
-======================= */
+/* Form Status Messages */
+#form-status {
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+#form-status.success {
+  color: #155724;
+  background: #d4edda;
+  border: 1px solid #c3e6cb;
+}
+
+#form-status.error {
+  color: #721c24;
+  background: #f8d7da;
+  border: 1px solid #f5c6cb;
+}
+
+#form-status.warning {
+  color: #856404;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+}
+
+/* Footer */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #222;
+  background: #008080;
   color: #fff;
   margin-top: 2rem;
 }
@@ -265,18 +181,15 @@ footer {
 .social-links a {
   margin: 0 10px;
   color: #fff;
-  font-size: 1.2rem;
-  text-decoration: none;
+  font-size: 1.4rem;
   transition: color 0.3s ease;
 }
 
 .social-links a:hover {
-  color: #1da1f2;
+  color: #ffb703;
 }
 
-/* =======================
-   Fade-in Animation for Sections
-======================= */
+/* Fade-in Animation */
 .fade-in {
   opacity: 0;
   transform: translateY(20px);
@@ -288,9 +201,41 @@ footer {
   transform: translateY(0);
 }
 
-/* =======================
-   Responsive Fixes
-======================= */
+/* Tech Stack Grid */
+.tech-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1rem;
+}
+
+.tech-item {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tech-item i {
+  font-size: 3rem;
+  margin-bottom: 0.5rem;
+}
+
+.tech-item p {
+  margin: 0;
+  font-weight: 500;
+  color: #333;
+}
+
+.tech-item:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+}
+
+/* Responsive Fixes */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;

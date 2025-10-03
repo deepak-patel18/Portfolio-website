@@ -7,7 +7,8 @@
 
   <!-- Font Awesome for Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
   <!-- Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -17,10 +18,9 @@
     <h1>Deepak Patel</h1>
     <ul class="nav-links">
       <li><a href="#about">About</a></li>
-      <li><a href="#tech-stack">Tech Stack</a></li>
+      <li><a href="#tech">Tech Stack</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><button id="dark-toggle">🌙</button></li>
     </ul>
   </nav>
 
@@ -60,85 +60,66 @@
   </section>
 
   <!-- Tech Stack Section -->
-  <section id="tech-stack" class="fade-in">
-    <h2>My Tech Stack</h2>
-    <p>Here are the tools and technologies I work with:</p>
-    <div class="tech-icons">
-      <span title="Object-Oriented Programming Language"><i class="fa-brands fa-java"></i> Java</span>
-      <span title="High-level Programming Language"><i class="fa-brands fa-python"></i> Python</span>
-      <span title="Frontend JavaScript Library"><i class="fa-brands fa-react"></i> React.js</span>
-      <span title="React Framework for SSR & SEO"><i class="fa-solid fa-globe"></i> Next.js</span>
-      <span title="Backend Framework for Python"><i class="fa-solid fa-gears"></i> Django</span>
-      <span title="JavaScript Runtime for Backend"><i class="fa-brands fa-node-js"></i> Node.js</span>
-      <span title="Relational Database"><i class="fa-solid fa-database"></i> MySQL</span>
-      <span title="NoSQL Database"><i class="fa-solid fa-leaf"></i> MongoDB</span>
-      <span title="Version Control System"><i class="fa-brands fa-git-alt"></i> Git & GitHub</span>
-      <span title="Frontend Core Technologies"><i class="fa-solid fa-code"></i> HTML, CSS, JS</span>
+  <section id="tech" class="fade-in">
+    <h2>Tech Stack</h2>
+    <div class="tech-grid">
+      <div class="tech-item"><i class="devicon-html5-plain colored"></i><p>HTML</p></div>
+      <div class="tech-item"><i class="devicon-css3-plain colored"></i><p>CSS</p></div>
+      <div class="tech-item"><i class="devicon-javascript-plain colored"></i><p>JavaScript</p></div>
+      <div class="tech-item"><i class="devicon-react-original colored"></i><p>React</p></div>
+      <div class="tech-item"><i class="devicon-react-original colored"></i><p>React Native</p></div>
+      <div class="tech-item"><i class="devicon-nextjs-original-wordmark"></i><p>Next.js</p></div>
+      <div class="tech-item"><i class="devicon-python-plain colored"></i><p>Python</p></div>
+      <div class="tech-item"><i class="devicon-java-plain colored"></i><p>Java</p></div>
+      <div class="tech-item"><i class="devicon-mysql-plain colored"></i><p>SQL</p></div>
     </div>
   </section>
 
- <!-- Projects Section -->
-<section id="projects" class="fade-in">
-  <h2>Projects</h2>
-  <div class="project-grid">
-    <div class="project-card">
-      <h3>🚗 Car Finder Web App</h3>
-      <p>A responsive web app to search, filter, and save cars with pagination and wishlist functionality.</p>
+  <!-- Projects Section -->
+  <section id="projects" class="fade-in">
+    <h2>Projects</h2>
+    <div class="project-grid">
+      <div class="project-card">
+        <h3>🏥 Hospital Management System</h3>
+        <p>A complete management system for hospitals including patients, doctors, and appointments.</p>
+      </div>
+      <div class="project-card">
+        <h3>📊 User Profile Analyzer</h3>
+        <p>Analyzes GitHub activity and displays insights using React and ShadCN UI.</p>
+      </div>
+      <div class="project-card">
+        <h3>🚗 Car Finder Web App</h3>
+        <p>A responsive web app to search, filter, and save cars with pagination and wishlist functionality.</p>
+      </div>
     </div>
-    <div class="project-card">
-      <h3>🌦 Weather App</h3>
-      <p>A weather forecast application using OpenWeather API that shows live temperature, humidity, and conditions for any city worldwide.</p>
-    </div>
-    <div class="project-card">
-      <h3>✅ Advanced To-Do App</h3>
-      <p>A feature-rich to-do list application with categories, due dates, priority levels, and localStorage support for persistence.</p>
-    </div>
-  </div>
-</section>
+  </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="fade-in">
-    <h2>Contact Me</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required />
-      <input type="email" placeholder="Your Email" required />
-      <textarea placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+<section id="contact" class="fade-in">
+  <h2>Contact Me</h2>
+  <form id="contact-form" action="https://formspree.io/f/xyznpjep" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <textarea name="message" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+
+  <!-- Success / Error Message -->
+  <p id="form-status" style="margin-top:10px; font-weight:bold;"></p>
+</section>
+
+
 
   <!-- Footer -->
   <footer>
     <div class="social-links">
-      <a href="https://www.linkedin.com/in/deepak-patel18" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-      <a href="https://github.com/deepak-patel18" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-    </div>
-    <div>
-      <a class="btn secondary" href="https://drive.google.com/uc?export=download&id=166ygy0v0jGuCRagydsT-0582te6kVLGa">
-        📄 Download My CV
-      </a>
+      <a href="https://www.linkedin.com/in/deepak-patel18" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="https://github.com/deepak-patel18" target="_blank"><i class="fa-brands fa-github"></i></a>
     </div>
     <p>&copy; 2025 Deepak Patel. All rights reserved.</p>
   </footer>
 
   <!-- Script -->
-  <script>
-    // Dark Mode Toggle
-    document.getElementById("dark-toggle").addEventListener("click", () => {
-      document.body.classList.toggle("dark-mode");
-    });
-
-    // Fade-in on scroll
-    const fadeElements = document.querySelectorAll('.fade-in');
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-        }
-      });
-    }, { threshold: 0.3 });
-
-    fadeElements.forEach(el => observer.observe(el));
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
